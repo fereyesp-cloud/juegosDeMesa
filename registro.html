@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Juegos de Rol</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+          <header class="encabezado" id="inicio">
+            <div class="contenedor encabezado-contenido">
+                <h1>Tu turno web</h1>
+                <p>Bienvenido a Tu Turno Web</p>
+            </div>
+        </header>
+        <nav class="navegacion">
+            <a href="index.html">Volver al inicio</a>
+            <a href="juegos-rol.html">juegos de rol</a>
+            <a href="juegos-familiares.html">Juegos familiares</a>
+            <a href="juegos-estrategia.html">Juegos de estrategia</a>
+            <a href="juegos-fiesta.html">Juegos de fiesta</a>
+        </nav>
+        <main>
+            <section class="seccion registro">
+                <div class="contenedor">
+                    <h2>Registro</h2>
+                    <form id="formulario-registro">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+                            <div class="invalid-feedback" id="error-nombre"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre de usuario</label>
+                            <input type="text" class="form-control" id="nombre-usuario" placeholder="Ingrese nombre de usuario">
+                            <div class="invalid-feedback" id="error-nombre-usuario"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="correo" class="form-label">Correo</label>
+                            <input type="text" class="form-control" id="correo" placeholder="ejemplo@example.cl">
+                            <div class="invalid-feedback" id="error-correo"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">contraseña</label>
+                            <input type="password" class="form-control" id="Contrasena" placeholder="contraseña">
+                            <div class="invalid-feedback" id="error-contrasena"></div>
+                            <button type="button" class="btn btn-outline-secondary" id="btn-ver-contrasena">👁</button>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label"> repetir contraseña</label>
+                            <input type="password" class="form-control" id="confirmar-contrasena" placeholder="contraseña">
+                            <div class="invalid-feedback" id="error-confirmar-contrasena"></div>
+                            <button type="button" class="btn btn-outline-secondary" id="btn-ver-confirmar">👁</button>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Fecha de nacimiento</label>
+                            <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento">
+                            <div class="invalid-feedback" id="error-fecha"></div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Dirección</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="dirrecion" placeholder="Dirrecion">
+                            </div>
+                            <div class="col-12">
+                                <label for="inputDetalle" class="form-label fw-semibold">Departamento, casa</label>
+                                <input type="text" class="form-control" id="inputDetalle" placeholder="apto 48, torre 6">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputCiudad" class="form-label fw-semibold">Comuna</label>
+                                <input type="text" class="form-control" id="inputCiudad">
+                            </div>
+
+                            <div class="col-md-4">
+                                <label for="inputRegion" class="form-label fw-semibold">Region</label>
+                                <select id="inputRegion" class="form-select">
+                                    <option value="" selected disabled>Selecciona...</option>
+                                    <option value="1">Región Metropolitana</option>
+                                    <option value="2">Valparaíso</option>
+                                    <option value="3">Biobío</option>
+                                </select>
+                            </div>                            
+                        </div>
+                        <button type="submit" class="btn btn-primary">Registrarse</button>
+                        <button type="reset" class="btn btn-secondary">Limpiar</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+            <footer class="pie-pagina">
+                <p>© 2026 Tu turno Web — Ejemplo académico DSY2202</p>
+            </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/registro.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
