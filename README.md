@@ -1,6 +1,7 @@
 # Tu Turno Web 🎲
 ## Versiones
 - v1.0 — HTML5 + CSS3 puro (Semana 1)
+- v2.0 — Bootstrap, formulario de registro y validaciones JavaScript (Semana 2)
 
 Sitio web de catálogo de juegos de mesa desarrollado como proyecto académico.
 
@@ -17,6 +18,8 @@ con catálogo dividido en 4 categorías.
 ## Tecnologías usadas
 - HTML5
 - CSS3 (Variables, Animaciones, Media Queries)
+- Bootstrap 5.3
+- JavaScript (Validaciones de formulario, manipulación del DOM)
 
 ## Estructura del proyecto
 - index.html — Página principal
@@ -24,8 +27,10 @@ con catálogo dividido en 4 categorías.
 - juegos-familiares.html — Categoría Familiar
 - juegos-estrategia.html — Categoría Estrategia
 - juegos-fiesta.html — Categoría Fiesta
+- registro-html - categoria registro
 - css/style.css — Estilos
 - img/ — Imágenes
+- js/ - registro
 
 ## Autor
 Fernando Reyes
