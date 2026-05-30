@@ -13,6 +13,7 @@
             <div class="contenedor encabezado-contenido">
                 <h1>Tu turno web</h1>
                 <p>Bienvenido a Tu Turno Web</p>
+                <a href="registro.html" class="boton-principal">Registrarse</a>
             </div>
         </header>
         <nav class="navegacion">
@@ -26,43 +27,48 @@
             <section class="seccion registro">
                 <div class="contenedor">
                     <h2>Registro</h2>
+                    <h3>Campos obligatorios *</h3>
                     <form id="formulario-registro">
                         <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre completo</label>
+                            <label for="nombre" class="form-label">Nombre completo *</label>
                             <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
                             <div class="invalid-feedback" id="error-nombre"></div>
                         </div>
                         <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre de usuario</label>
+                            <label for="nombre" class="form-label">Nombre de usuario *</label>
                             <input type="text" class="form-control" id="nombre-usuario" placeholder="Ingrese nombre de usuario">
                             <div class="invalid-feedback" id="error-nombre-usuario"></div>
                         </div>
                         <div class="mb-3">
-                            <label for="correo" class="form-label">Correo</label>
+                            <label for="correo" class="form-label">Correo *</label>
                             <input type="text" class="form-control" id="correo" placeholder="ejemplo@example.cl">
                             <div class="invalid-feedback" id="error-correo"></div>
                         </div>
                         <div class="mb-3">
-                            <label for="nombre" class="form-label">contraseña</label>
-                            <input type="password" class="form-control" id="Contrasena" placeholder="contraseña">
+                            <label for="nombre" class="form-label">contraseña *</label>
+                            <div class="input-group">
+                                 <input type="password" class="form-control" id="Contrasena" placeholder="contraseña">
+                                 <button type="button" class="btn btn-outline-secondary" id="btn-ver-contrasena">👁</button>
+                            </div>
                             <div class="invalid-feedback" id="error-contrasena"></div>
-                            <button type="button" class="btn btn-outline-secondary" id="btn-ver-contrasena">👁</button>
                         </div>
                         <div class="mb-3">
-                            <label for="nombre" class="form-label"> repetir contraseña</label>
-                            <input type="password" class="form-control" id="confirmar-contrasena" placeholder="contraseña">
+                            <label for="nombre" class="form-label"> repetir contraseña *</label>
+                            <div class="input-group">
+                                <input type="password" class="form-control" id="confirmar-contrasena" placeholder="contraseña">
+                                <button type="button" class="btn btn-outline-secondary" id="btn-ver-confirmar">👁</button>
+                            </div>
                             <div class="invalid-feedback" id="error-confirmar-contrasena"></div>
-                            <button type="button" class="btn btn-outline-secondary" id="btn-ver-confirmar">👁</button>
                         </div>
                         <div class="mb-3">
-                            <label for="nombre" class="form-label">Fecha de nacimiento</label>
+                            <label for="nombre" class="form-label">Fecha de nacimiento *</label>
                             <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento">
                             <div class="invalid-feedback" id="error-fecha"></div>
                         </div>
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Dirección</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="dirrecion" placeholder="Dirrecion">
+                                <input type="text" class="form-control" id="dirrecion" placeholder="Dirección">
                             </div>
                             <div class="col-12">
                                 <label for="inputDetalle" class="form-label fw-semibold">Departamento, casa</label>

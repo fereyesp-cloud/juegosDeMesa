@@ -270,6 +270,14 @@ Botones
     display: inline-block;
 }
 
+.seccion.registro {
+    padding: 3rem 0; 
+}
+
+#formulario-registro {
+    margin-bottom: 2rem;
+}
+
 /*
     ANIMACIONES
 */
@@ -310,7 +318,7 @@ Botones
 
     /* Header más pequeño */
     .encabezado {
-        min-height: 50vh;
+        min-height: 40vh;
     }
 
     /* Tarjetas ocupan todo el ancho */
@@ -329,5 +337,9 @@ Botones
     }
       .contenedor-tarjetas {
         grid-template-columns: 1fr; /* 1 columna en móvil */
+    }
+
+    .contenedor-beneficios {
+        grid-template-columns: 1fr; /* ← 1 columna en móvil */
     }
 }
