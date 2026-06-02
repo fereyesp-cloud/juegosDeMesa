@@ -16,12 +16,19 @@
     box-sizing: border-box;
 }
 
+main {
+     flex: 1;
+}
+
 body{
     margin: 0;
     font-family: var(--fuente-principal);
     background-color: var(--color-fondo);
     color: var(--color-texto-oscuro);
     line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 img {
@@ -278,6 +285,24 @@ Botones
     margin-bottom: 2rem;
 }
 
+.login {
+    background-color: var(--color-fondo);
+    padding: 3rem 0;
+}
+
+.login .contenedor {
+    max-width: 500px;
+}
+
+.form-recuperar {
+    background-color: var(--color-fondo);
+    padding: 3rem 0;
+}
+
+.recuperar-contrasena .contenedor {
+    max-width: 500px;
+    padding: 3rem 0;
+}   
 /*
     ANIMACIONES
 */
