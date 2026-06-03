@@ -79,6 +79,7 @@ nav
 
 .navegacion a{
   color: var(--color-texto-claro);
+  background-color: var(--color-texto-oscuro);
   text-decoration: none;
   margin: 0 14px;
   font-weight: bold;
@@ -90,6 +91,13 @@ nav
 }
 
 .seccion.nosotros {
+    background-color: var(--color-header);
+    color: var(--color-texto-claro);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.seccion.carro {
     background-color: var(--color-header);
     color: var(--color-texto-claro);
     text-align: center;
@@ -302,7 +310,62 @@ Botones
 .recuperar-contrasena .contenedor {
     max-width: 500px;
     padding: 3rem 0;
-}   
+} 
+
+#usuario-activo {
+    color: var(--color-texto-claro);
+    font-weight: bold;
+    line-height: 1.5;
+    padding: 0.5rem;
+}
+
+.seccion.perfil .contenedor {
+    max-width: 500px;
+    padding: 3rem 0;
+}
+
+#formulario-perfil {
+    background-color: var(--color-fondo);
+    padding: 3rem 0;
+}
+.navegacion {
+    background-color: var(--color-texto-oscuro);
+}
+
+.navegacion .nav-link {
+    color: var(--color-texto-claro) !important;
+    font-weight: bold;
+}
+
+.navegacion .nav-link:hover {
+    color: var(--color-acento) !important;
+}
+
+.navbar-toggler {
+    border-color: var(--color-texto-claro);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1); /* hace el ícono blanco */
+}
+.seccion.carro .card img {
+    height: 150px;
+    object-fit: contain;
+}
+
+.seccion.carro .card {
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
+}
+
+.seccion.carro .card img {
+    height: 80px;
+    object-fit: contain;
+}
+
+.seccion.carro .row {
+    min-height: unset;
+}
 /*
     ANIMACIONES
 */
@@ -331,14 +394,16 @@ Botones
 @media (max-width: 768px) {
 
     /* Nav en columna */
-    .navegacion {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
+    .navegacion .nav-link {
+        padding: 0.3rem 0.5rem;
     }
 
     .navegacion a {
         margin: 4px 0;
+    }
+
+     #usuario-activo {
+        font-size: 0.8rem;
     }
 
     /* Header más pequeño */

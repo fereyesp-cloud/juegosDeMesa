@@ -13,6 +13,10 @@ document.getElementById('btn-ver-confirmar').addEventListener('click', function(
     input.type = input.type === 'password' ? 'text' : 'password';
 });
 
+document.getElementById('btn-aceptar-modal').addEventListener('click', function() {
+    window.location.href = 'index.html'
+})
+
 function validarFormulario() {
     let nombre = document.getElementById('nombre').value;
     let nombreUsuario = document.getElementById('nombre-usuario').value;
@@ -23,7 +27,7 @@ function validarFormulario() {
     let valido = true;
 
     const formatoCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const formatoContrasena = /^(?=.*[A-Z])(?=.*\d).{6,18}$/;
+    const formatoContrasena = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{6,18}$/;
 
     if (nombre === '') {
         document.getElementById('nombre').classList.add('is-invalid');
@@ -59,7 +63,7 @@ function validarFormulario() {
         valido = false;
     } else if (!formatoContrasena.test(contrasena)) {
         document.getElementById('Contrasena').classList.add('is-invalid');
-        document.getElementById('error-contrasena').textContent = 'La contraseña debe tener entre 6 y 18 caracteres, una mayúscula y un número';
+        document.getElementById('error-contrasena').textContent = 'La contraseña debe tener entre 6 y 18 caracteres, una mayúscula, un número y un carácter especial (!@#$%^&*)';
         valido = false;
     } else if (contrasena !== confirmarContrasena) {
         document.getElementById('confirmar-contrasena').classList.add('is-invalid');
@@ -88,6 +92,24 @@ function validarFormulario() {
     }
 
      if(valido){
-        alert('¡Registro exitoso!')
+        let nuevoUsuario = {
+            nombre: nombre,
+            nombreUsuario: nombreUsuario,
+            correo: correo,
+            contrasena: contrasena,
+            fecha: fecha,
+            rol: 'cliente'
+        }
+
+        let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+        //se agrega el usuario nuevo
+        usuarios.push(nuevoUsuario);
+        //Se guarda en localStorage
+        localStorage.setItem('usuarios', JSON.stringify(usuarios))
+        
+        let modal = new bootstrap.Modal(document.getElementById('modalExitoso'));
+        modal.show();
     }
+
 }

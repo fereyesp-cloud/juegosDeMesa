@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carro de compra</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+         <header class="encabezado" id="inicio">
+            <div class="contenedor encabezado-contenido">
+                <h1>Carro de compra - Tu turno web</h1>
+                <p>Bienvenido a Tu Turno Web</p>
+                <a href="#menu" class="boton-principal">ver menú</a>
+                <a href="registro.html" class="boton-principal">Registrarse</a>
+            </div>
+        </header>
+        <nav class="navbar navbar-expand-xl navegacion">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="../juegos-rol.html">Juegos de rol</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../juegos-familiares.html">Juegos familiares</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../juegos-estrategia.html">Juegos de estrategia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../juegos-fiesta.html">Juegos de fiesta</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../login.html" id="btn-login">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../registro.html" id="btn-registro">Registrarse</a></li>
+                        <li class="nav-item"><a class="nav-link" id="usuario-activo"></a></li>
+                        <li class="nav-item" id="li-cerrar-sesion" style="display:none">
+                            <a class="nav-link" href="#" id="btn-cerrar-sesion">Cerrar sesión</a>
+                        </li>
+                        <li class="nav-item" id="li-perfil" style="display:none">
+                            <a class="nav-link" href="perfil.html" id="btn-perfil">Mi perfil</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="carrito.html">🛒 Carrito</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <section class="seccion carro">
+                <div class="contenedor">
+                    <h2>Carro de compras</h2>
+                    <div id="lista-carro"></div>
+                    <div class="total-carro">
+                    <h4>Total: <span id="total-carro">$0</span></h4>
+                    </div>
+                    <button class="btn btn-danger" id="btn-vaciar-carro">Vaciar carrito</button>
+                    <button class="btn btn-success" id="btn-comprar">Finalizar compra</button>
+                </div>
+            </section>
+        </main>
+         <!-- ========================================================= -->
+        <!-- PIE DE PÁGINA -->
+        <!-- ========================================================= -->
+
+        <footer class="pie-pagina">
+            <p>© 2026 Tu turno Web — Ejemplo académico DSY2202</p>
+        </footer>
+        <div class="modal fade" id="modalCompra" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">¡Compra exitosa!</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>Tu compra ha sido procesada correctamente.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="btn-aceptar-compra" data-bs-dismiss="modal">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/session.js"></script>
+        <script src="../js/vista_usuario/carrito-vista.js"></script>
+    </body>
+</html>

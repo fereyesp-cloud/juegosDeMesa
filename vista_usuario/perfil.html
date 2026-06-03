@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi Perfil</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+
+    <body>
+        <header class="encabezado" id="perfil">
+            <div class=" contenedor encabezado-contenido">
+                <h1>Mi perfil - Tu turno web</h1>
+                <p>Bienvenido</p>
+            </div>
+        </header>
+      <nav class="navbar navbar-expand-xl navegacion">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="../juegos-rol.html">Juegos de rol</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../juegos-familiares.html">Juegos familiares</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../juegos-estrategia.html">Juegos de estrategia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../juegos-fiesta.html">Juegos de fiesta</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../login.html" id="btn-login">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../registro.html" id="btn-registro">Registrarse</a></li>
+                        <li class="nav-item"><a class="nav-link" id="usuario-activo"></a></li>
+                        <li class="nav-item" id="li-cerrar-sesion" style="display:none">
+                            <a class="nav-link" href="#" id="btn-cerrar-sesion">Cerrar sesión</a>
+                        </li>
+                        <li class="nav-item" id="li-perfil" style="display:none">
+                            <a class="nav-link" href="perfil.html" id="btn-perfil">Mi perfil</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="carrito.html">🛒 Carrito</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <section class="seccion perfil">
+                <div class="contenedor">
+                    <form id="formulario-perfil">
+                        <div class="mb-3">
+                            <label class="form-label">Nombre completo</label>
+                            <input type="text" class="form-control" id="nombre">
+                        </div>
+                         <div class="mb-3">
+                            <label class="form-label">Nombre de usuario</label>
+                            <input type="text" class="form-control" id="nombre-usuario">
+                        </div>
+                         <div class="mb-3">
+                            <label class="form-label">Correo</label>
+                            <input type="text" class="form-control" id="correo">
+                        </div>
+                         <div class="mb-3">
+                            <label class="form-label">Fecha de nacimiento</label>
+                            <input type="date" class="form-control" id="fechaNacimiento">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+        <footer class="pie-pagina">
+            <p>© 2026 Tu turno Web — Ejemplo académico DSY2202</p>
+        </footer>
+
+         <div class="modal fade" id="modalEditar-perfil" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Perfil actualizado</h5>
+                        </div>
+                    <div class="modal-body">
+                        <p>El perfil se a actualizado correctamente</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="btn-aceptar-modal" data-bs-dismiss="modal">Aceptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/session.js"></script>
+        <script src="../js/vista_usuario/perfil.js"></script>
+    </body>
+</html>

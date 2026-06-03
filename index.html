@@ -17,13 +17,30 @@
             </div>
         </header>
 
-        <nav class="navegacion">
-            <a href="juegos-rol.html">juegos de rol</a>
-            <a href="juegos-familiares.html">Juegos familiares</a>
-            <a href="juegos-estrategia.html">Juegos de estrategia</a>
-            <a href="juegos-fiesta.html">Juegos de fiesta</a>
-            <a href="login.html">Login</a>
-            <a href="registro.html">Registrarse</a>
+      <nav class="navbar navbar-expand-xl navegacion">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item"><a class="nav-link" href="juegos-rol.html">Juegos de rol</a></li>
+                        <li class="nav-item"><a class="nav-link" href="juegos-familiares.html">Juegos familiares</a></li>
+                        <li class="nav-item"><a class="nav-link" href="juegos-estrategia.html">Juegos de estrategia</a></li>
+                        <li class="nav-item"><a class="nav-link" href="juegos-fiesta.html">Juegos de fiesta</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html" id="btn-login">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="registro.html" id="btn-registro">Registrarse</a></li>
+                        <li class="nav-item"><a class="nav-link" id="usuario-activo"></a></li>
+                        <li class="nav-item" id="li-cerrar-sesion" style="display:none">
+                            <a class="nav-link" href="#" id="btn-cerrar-sesion">Cerrar sesión</a>
+                        </li>
+                        <li class="nav-item" id="li-perfil" style="display:none">
+                            <a class="nav-link" href="vista_usuario/perfil.html" id="btn-perfil">Mi perfil</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="vista_usuario/carrito.html">🛒 Carrito</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
         <main>
             <section class="seccion nosotros" id="nosotros">
@@ -57,6 +74,11 @@
                                 <p class="precio"> $59.990</p>
                                 <p class="descuento"> 10% con pagos en transferencia</p>
                                  <a href="juegos-rol.html">Ver juegos</a>
+                                 <button class="btn btn-primary btn-agregar-carro"
+                                    data-nombre="Caos en Neverwinter"
+                                    data-precio="59990"
+                                    data-imagen="img/caosNeverwinter .webp">🛒 Agregar al carrito
+                                </button>
                             </div>
 
                         </article>
@@ -76,6 +98,11 @@
                             <p class="precio"> $9.990</p>
                             <p class="descuento">10% con pagos en transferencia </p>
                             <a href="juegos-familiares.html">Ver juegos</a>
+                            <button class="btn btn-primary btn-agregar-carro"
+                                    data-nombre="Basta"
+                                    data-precio="9990"
+                                    data-imagen="img/juegoBasta .webp">🛒 Agregar al carrito
+                            </button>
                         </div>
                     </article>
                     <!-- ========================================================= -->
@@ -95,6 +122,11 @@
                             <p class="precio"> $39.990</p>
                             <p class="descuento">10% con pagos en transferencia</p>
                             <a href="juegos-estrategia.html">Ver juegos</a>
+                             <button class="btn btn-primary btn-agregar-carro"
+                                    data-nombre="EXIT: El laberinto maldito"
+                                    data-precio="39990"
+                                    data-imagen="img/ExitLaberintoMaldito .webp">🛒 Agregar al carrito
+                            </button>
                         </div>
                     </article>
                     <!-- ========================================================= -->
@@ -111,6 +143,11 @@
                             <p class="precio">$14.990</p>
                             <p class="descuento">10% con pagos en transferencia</p>
                             <a href="juegos-fiesta.html">Ver juegos</a>
+                            <button class="btn btn-primary btn-agregar-carro"
+                                    data-nombre="Si te ríes, tomas"
+                                    data-precio="14990"
+                                    data-imagen="img/SiteReisPierdes .webp">🛒 Agregar al carrito
+                            </button>
                         </div>
                      </article>
                      </div>
@@ -162,5 +199,7 @@
     <p>© 2026 Tu turno Web — Ejemplo académico DSY2202</p>
   </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/session.js"></script>
+        <script src="js/vista_usuario/carrito.js"></script>
     </body>
 </html>
