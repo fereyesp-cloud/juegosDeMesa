@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Juegos de mesa</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header class="encabezado" id="dashboard">
+            <div class="contenedor encabezado-contenido">
+                <h1>Dashboard - Tu turno web</h1>
+                <a href="#" class="boton-principal" id="cerrar-session-admin">Cerrar session</a>
+            </div>
+        </header>
+        <main>
+            <section class="Resumen-admin" id="general">
+                <div class="contenedor">
+                    <div id="resumen-general">
+                        <p id="total-usuarios">Total usuarios: 0</p>
+                    </div>                         
+                </div>
+            </section>
+            <section class="gestion-admin" id="gestionUsuario">
+                <div class="contenedor" id="usuarioGestion">
+                    <h2>Gestion de usuario</h2>
+                    <div class="mb-3">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Usuario</th>
+                                    <th>Correo</th>
+                                    <th>Rol</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-usuarios">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <section class="productos-admin" id="gestionProductos">
+                <div class="contenedor" id="productoGestion">
+                    <h2>Gestion de productos</h2>
+                    <div class="mb-3">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th> 
+                                    <th>Categoría</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tabla-productos">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+         <footer class="pie-pagina">
+            <p>© 2026 Tu turno Web — Ejemplo académico DSY2202</p>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/vista_admin/dashboard.js"></script>
+    </body>
+</html>

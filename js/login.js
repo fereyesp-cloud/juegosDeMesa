@@ -30,17 +30,34 @@ function validarLogin() {
     }
 
     if(valido){
-        let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
-        let usuariosEncontrado = usuarios.find(u =>
-            u.nombreUsuario === usuario && u.contrasena === contrasena
-        )
+    let usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+    let usuariosEncontrado = usuarios.find(u =>
+        u.nombreUsuario === usuario && u.contrasena === contrasena
+    )
 
-        if(usuariosEncontrado) {
-            sessionStorage.setItem('usuarioActivo', JSON.stringify(usuariosEncontrado));
-            window.location.href = 'index.html'
+    if(usuariosEncontrado) {
+        sessionStorage.setItem('usuarioActivo', JSON.stringify(usuariosEncontrado));
+        
+        // Redirigir según rol
+        if (usuariosEncontrado.rol === 'admin') {
+            window.location.href = 'vista_admin/dashboard.html';
         } else {
-            let modal = new bootstrap.Modal(document.getElementById('modalErroneo-login'));
-            modal.show();
+            window.location.href = 'index.html';
         }
+    } else {
+        let modal = new bootstrap.Modal(document.getElementById('modalErroneo-login'));
+        modal.show();
     }
+}
+
+    if (usuarioEncontrado) {
+        sessionStorage.setItem('usuarioActivo', JSON.stringify(usuarioEncontrado));
+    
+        // Redirigir según rol
+        if (usuarioEncontrado.rol === 'admin') {
+            window.location.href = 'vista_admin/dashboard.html';
+        } else {
+            window.location.href = 'index.html';
+    }
+}
 }
