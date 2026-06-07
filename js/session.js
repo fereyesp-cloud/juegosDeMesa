@@ -34,5 +34,12 @@ if (usuarioActivo) {
 
 document.getElementById('btn-cerrar-sesion').addEventListener('click', function() {
     sessionStorage.removeItem('usuarioActivo');
-    window.location.href = 'index.html';
+    
+    
+    if (window.location.pathname.includes('vista_usuario') || 
+        window.location.pathname.includes('vista_admin')) {
+        window.location.href = '../index.html';
+    } else {
+        window.location.href = 'index.html';
+    }
 });

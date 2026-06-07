@@ -38,6 +38,14 @@ document.getElementById('btn-vaciar-carro').addEventListener('click', function()
 });
 
 document.getElementById('btn-comprar').addEventListener('click', function() {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    
+    if (carrito.length === 0) {
+        let modal = new bootstrap.Modal(document.getElementById('modalCarritoVacio'));
+        modal.show();
+        return;
+    }
+    
     localStorage.removeItem('carrito');
     let modal = new bootstrap.Modal(document.getElementById('modalCompra'));
     modal.show();

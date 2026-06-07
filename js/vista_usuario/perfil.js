@@ -38,3 +38,7 @@ document.getElementById('formulario-perfil').addEventListener('submit', function
         modal.show();
     }
 })
+
+document.getElementById('btn-aceptar-modal-perfil').addEventListener('click', function() {
+    window.location.href = '../index.html';
+});

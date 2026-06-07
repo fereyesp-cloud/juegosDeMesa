@@ -15,6 +15,7 @@ document.querySelectorAll('.btn-agregar-carro').forEach(function(boton) {
 
         //Guardar carrito
         localStorage.setItem('carrito', JSON.stringify(carrito))
-        alert('Producto agregado al carro')
+        let modal = new bootstrap.Modal(document.getElementById('modalProductoAgregado'));
+        modal.show();
     })
 })
